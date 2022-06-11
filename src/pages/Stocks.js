@@ -1,6 +1,10 @@
-const Stocks = () => {
+import { Link } from "react-router-dom"
+
+const Stocks = ({name, symbol}) => {
     return(
-        <h1>This is the Stocks Component.</h1>
+        <Link to={`/stocks/${symbol}`}>
+        <h1>{name}</h1>
+        </Link>
     )
 }
 

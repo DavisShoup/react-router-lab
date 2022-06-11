@@ -1,5 +1,5 @@
 import './App.css';
-import stockData from "./data.json"
+import stockArr from "./data.json"
 import Nav from './components/Nav.js'
 
 import About from './pages/About';
@@ -10,8 +10,11 @@ import Stocks from "./pages/Stocks";
 import { Route } from 'react-router-dom';
 
 function App() {
-
-
+  const stockData = stockArr.map((elem, index) => {
+    return(
+      <Stocks {...elem} key={index}/>
+    );
+  });
   return (
     <div className="App">
       <Nav />
@@ -21,12 +24,13 @@ function App() {
       <Route path="/about">
         <About />
       </Route>
+      <Route exact path="/stocks">
+        {stockData}
+      </Route>
       <Route path="/stocks/:symbol">
         <Stock />
       </Route>
-      <Route exact path="/stocks">
-        <Stocks />
-      </Route>
+      
     </div>
   );
 }
