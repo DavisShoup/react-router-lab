@@ -1,6 +1,9 @@
 const Main = () => {
     return(
-        <h1>This is the Main Component</h1>
+        <>
+        <h1>Home</h1>
+        <p>Check out the prices for stocks!</p>
+        </>
     );
 };
 

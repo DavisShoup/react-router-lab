@@ -2,9 +2,11 @@ import { Link } from "react-router-dom"
 
 const Stocks = ({name, symbol}) => {
     return(
-        <Link to={`/stocks/${symbol}`}>
-        <h1>{name}</h1>
-        </Link>
+        <div className="stock-names">
+            <Link to={`/stocks/${symbol}`}>
+                <h1>{name}</h1>
+            </Link>
+        </div>
     )
 }
 

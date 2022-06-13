@@ -4,7 +4,7 @@ import Nav from './components/Nav.js'
 
 import About from './pages/About';
 import Main from './pages/Main';
-import Stock from './pages/Stock';
+import StockPrice from './pages/StockPrice';
 import Stocks from "./pages/Stocks";
 
 import { Route } from 'react-router-dom';
@@ -12,7 +12,7 @@ import { Route } from 'react-router-dom';
 function App() {
   const stockData = stockArr.map((elem, index) => {
     return(
-      <Stocks {...elem} key={index}/>
+        <Stocks {...elem} key={index}/>
     );
   });
   return (
@@ -27,10 +27,9 @@ function App() {
       <Route exact path="/stocks">
         {stockData}
       </Route>
-      <Route path="/stocks/:symbol">
-        <Stock />
-      </Route>
-      
+      <Route exact path="/stocks/:symbol" render={(renderProps) => {
+        return <StockPrice  {...renderProps}/>
+      }} />
     </div>
   );
 }

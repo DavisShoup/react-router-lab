@@ -5,9 +5,50 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(68,87,96);
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(43,55,61);
+  color: white;
+  padding: 15px;
+  font-size: 2em;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color:blanchedalmond;
+}
+
+.stock-names a {
+  color: white;
+  text-decoration: none;
+}
+
+.stock-names a:hover {
+  color:blanchedalmond;
+}
+
+button {
+  background-color: rgb(43,55,61);
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  color:blanchedalmond;
+  border-color: blanchedalmond;
+  cursor: pointer;
 }
